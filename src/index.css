@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.calendar .ant-radio-group {
+    display: none;
+}
+
+.calendar .ant-picker-calendar-header {
+    padding: 0 1rem;
+}

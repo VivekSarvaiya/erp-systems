@@ -16,7 +16,6 @@ const App = () => {
       <Routes>
         <Route element={<PublicRoute />}>
           <Route path="/login" element={<Login />} />
-          <Route path="*" element={<Navigate to="/login" replace />} />
         </Route>
         <Route element={<PrivateRoute />}>
           <Route element={<Layout />} >
@@ -25,13 +24,12 @@ const App = () => {
             <Route path="/products" element={<Products />} />
             <Route path="/orders" element={<Orders />} />
             <Route path="/calendar" element={<Calender />} />
-            <Route path="*" element={<Navigate to="/dashboard" replace />} />
           </Route>
         </Route>
+        <Route path="*" element={<Navigate to="/dashboard" replace />} />
       </Routes>
     </Suspense>
   )
 };
-
 
 export default App;
